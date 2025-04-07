@@ -1,0 +1,59 @@
+<header class="navbar">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/1313/1313007.png" alt="Ecommerce Product Logo" class="logo-img">
+  </div>
+  <nav>
+    <a href="#">Menu</a>
+    <a href="#">Products</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+    <a (click)="navigateTo('register')" class="signup">Sign Up</a>
+
+    <!-- Dropdown for Login -->
+    <div class="dropdown">
+      <button class="dropbtn">Login ▼</button>
+      <div class="dropdown-content">
+        <a (click)="navigateTo('customer-login')">👤 Customer Login</a>
+        <a (click)="navigateTo('new-login')"> New Login</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Your Favorite Products, <br> Delivered Fast & safe! </h1>
+    <p>Order from one of the best Ecommerce Website.</p>
+    <div class="hero-buttons">
+      <button (click)="navigateTo('register')" class="btn primary">Get Started</button>
+      <button (click)="navigateTo('customer-login')" class="btn secondary">Login</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://www.syntacticsinc.com/wp-content/uploads/2020/10/15255.jpg" alt="ZingPlate Logo">
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-box">
+    <h3>👜👕 Wide Variety Of Products</h3>
+    <p>This Website Offers A Wide Selection Of High-Quality Products.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🚀 Fast Delivery</h3>
+    <p>Get your product safely in less time.</p>
+  </div>
+  <div class="feature-box">
+    <h3>💳 Secure Payments</h3>
+    <p>Pay safely with multiple payment options.</p>
+  </div>
+  <div class="feature-box">
+    <h3>📍 Track Your Order</h3>
+    <p>Real-time tracking till you recieve your product to respective doorstep.</p>
+  </div>
+</section>
+
+<footer>
+  <img src="https://static.vecteezy.com/system/resources/previews/003/092/544/original/e-commerce-logo-with-pointer-and-shopping-bag-free-vector.jpg">
+  <p>© 2025 Ecommerceproduct. All Rights Reserved.</p>
+</footer>

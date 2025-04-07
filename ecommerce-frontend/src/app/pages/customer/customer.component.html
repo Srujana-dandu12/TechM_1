@@ -1,0 +1,40 @@
+<!-- ✅ Navigation Bar -->
+<nav class="navbar">
+  <ul>
+    <li><a routerLink="/home">Home</a></li>
+    <li><a (click)="goToPreviousOrders()"style="cursor: pointer">Previous Orders</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+    <li><a (click)="logout()" class="logout"style="cursor: pointer">Logout</a></li>
+  </ul>
+</nav>
+
+<div class="customer-container">
+  <h1> Order Your Favorite product</h1>
+
+  <div class="product-list">
+    <div *ngFor="let product of foodItems" class="food-card">
+      <img [src]="product.image" alt="Product Image" class="product-img">
+      <div class="product-info">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p class="price">₹{{ product.price }}</p>
+
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(product)">➖</button>
+          <span>{{ product.quantity }}</span>
+          <button (click)="increaseQuantity(product)">➕</button>
+        </div>
+
+        <p class="total-price">Total: ₹{{ product.price * product.quantity }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grand-total">
+    <h2>Total: ₹{{ totalAmount }}</h2>
+  </div>
+
+  <div class="checkout">
+    <button (click)="goToCheckout()">Proceed to Checkout</button>
+  </div>
+</div>
